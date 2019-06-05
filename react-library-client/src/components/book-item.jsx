@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Item = styled.li`
@@ -15,12 +14,14 @@ const Item = styled.li`
     }
 `;
 
+/**
+ * Элемент списка
+ * @param {array} props 
+ */
 export const BookItem = props => {
+    // eslint-disable-next-line react/prop-types
     const { title, onSelect } = props;
 
     return <Item onClick={() => onSelect()}>{title}</Item>;
 };
 
-BookItem.propTypes = {
-    title: PropTypes.string,
-};

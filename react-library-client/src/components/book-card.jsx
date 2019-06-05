@@ -8,6 +8,7 @@ import {
 import { BookContext } from './context';
 import styled from 'styled-components';
 import spinner from '../assets/Spinner-1s-100px.gif';
+import config from 'config';
 
 const Container = styled.div`
     padding: 16px 24px;
@@ -45,10 +46,13 @@ const ValueContainer = styled.div`
     }
 `;
 
+/**
+ * Карточка выбранной книги
+ */
 export const BookCard = () => {
     const [bookId] = useContext(BookContext);
     const [{ status, response }, makeRequest] = useApiRequest(
-        `http://localhost:3001/api/book/${bookId}`,
+        `${config.apiUrl}/api/book/${bookId}`,
         {
             verb: 'get',
         }

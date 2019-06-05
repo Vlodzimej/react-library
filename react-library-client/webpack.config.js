@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
     entry: ['babel-polyfill', './src/index.js'],
     output: {
@@ -42,4 +41,9 @@ module.exports = {
         compress: true,
         port: 3000,
     },
+    externals: {
+        config: JSON.stringify({
+            apiUrl: 'http://localhost:3001'
+        })
+    }    
 };

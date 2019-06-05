@@ -3,6 +3,7 @@ import axios from 'axios';
 import { BookContext } from './context';
 import styled from 'styled-components';
 import { BookItem } from './book-item';
+import config from 'config';
 
 const Container = styled.div`
     box-sizing: border-box;
@@ -22,13 +23,16 @@ const List = styled.ul`
     list-style: none;
 `;
 
+/**
+ * Список книг
+ */
 export const BookList = () => {
     const [data, setData] = useState(null);
     const [, setBookId] = useContext(BookContext);
 
     useEffect(() => {
         axios
-            .get('http://localhost:3001/api/books')
+            .get(`${config.apiUrl}/api/books`)
             .then(result => setData(result.data));
     }, []);
 
