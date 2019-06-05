@@ -1,16 +1,30 @@
 [
   {
     "id": "1",
-    "title": "Book 1",
-    "description": "Desc 1",
-    "year": "2001",
-    "author": "Noname"
+    "title": "ASP.NET Core in Action",
+    "description": "ASP.NET Core in Action opens up the world of cross-platform web development with .NET. You’ll start with a crash course in .NET Core, immediately cutting the cord between ASP.NET and Windows. Then, you’ll begin to build amazing web applications step by step, systematically adding essential features like logins, configuration, dependency injection, and custom components. Along the way, you’ll mix in important process steps like testing, multiplatform deployment, and security.",
+    "year": "2018",
+    "author": "Andrew Lock"
   },
   {
     "id": "2",
-    "title": "Book 2",
-    "description": "Desc 2",
-    "year": "2002",
-    "author": "Nonamed"
-  }
+    "title": "CLR via C#",
+    "description": "Эта  книга,  выходящая  в  четвертом  издании  и  уже  ставшая  классическим  учебником  по  программированию, подробно описывает внутреннее устройство и функционирование обще-языковой исполняющей среды (CLR) Microsoft .NET Framework версии 4.5. Написанная при-знанным экспертом в области программирования Джеффри Рихтером, много лет являющимся консультантом команды разработчиков .NET Framework компании Microsoft, книга научит вас создавать по-настоящему надежные приложения любого вида, в том числе с использованием Microsoft Silverlight, ASP.NET, Windows Presentation Foundation и т. д.Четвертое  издание  полностью  обновлено  в  соответствии  со  спецификацией  платформы  .NET Framework 4.5, а также среды Visual Studio 2012 и C# 5.0",
+    "year": "2013",
+    "author": "Джеффри Рихтер"
+  },
+  {
+    "id": "3",
+    "title": "React in Action",
+    "description": "React in Action teaches you to think like a pro about user interfaces and building them with React. This practical book gets you up and running quickly with hands-on examples in every chapter. You’ll master core topics like rendering, lifecycle methods, JSX, data flow, forms, routing, integrating with third-party libraries, and testing. And the included application design ideas will help make your apps pop. As you learn to integrate React into full-stack applications, you’ll explore state management with Redux and server-side rendering, and even dabble in React Native for mobile UIs.",
+    "year": "2018",
+    "author": "Mark Thomas"
+  },
+  {
+    "id": "4",
+    "title": "Программирование: типовые задачи, алгоритмы, методы",
+    "description": "Эта книга для тех, кто хочет научиться программи-ровать.  В  ней  представлена  методика  решения  типовыхзадач программирования, не привязанная к конкретномуязыку. Разъяснения по методике решения задач и про-граммы приведены на школьном алгоритмическом языке.Русский синтаксис делает программы понятными и легкопереносимыми на любой язык программирования.Для  школьников  и  студентов,  начинающих  изучатьпрограммирование или знакомых с его основами, а такжедля всех, кого заинтересует решение сложных задач, в томчисле встречающихся на олимпиадах по программированию.Книга будет полезна преподавателям различных учебныхзаведений и студентам педагогических вузов.",
+    "year": "2015",
+    "author": "Златопольский Д.М."
+  }  
 ]
