@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import 'babel-polyfill';
+import { BookContext } from './context';
+import Book from './book';
+import BookList from './booklist';
 
-import '../styles/App.css';
-
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>My React App!!!</h1>
-            </div>
-        );
-    }
-}
+export const App = () => {
+    const [bookId, setBookId] = useState(0);
+    return (
+        <div>
+            <BookContext.Provider value={[bookId, setBookId]}>
+                <BookList />
+                <Book />
+            </BookContext.Provider>
+        </div>
+    );
+};
 export default App;
