@@ -23,11 +23,17 @@ const List = styled.ul`
     list-style: none;
 `;
 
+const EmptyList = styled.div`
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+`;
+
 /**
  * Список книг
  */
 export const BookList = () => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [, setBookId] = useContext(BookContext);
 
     useEffect(() => {
@@ -39,16 +45,19 @@ export const BookList = () => {
     return (
         <div>
             <Container>
-                <List>
-                    {data &&
-                        data.map(item => (
+                {data.length > 0 ? (
+                    <List>
+                        {data.map(item => (
                             <BookItem
                                 onSelect={() => setBookId(item.id)}
                                 key={item.id}
                                 {...item}
                             />
                         ))}
-                </List>
+                    </List>
+                ) : (
+                    <EmptyList>List is empty</EmptyList>
+                )}
             </Container>
         </div>
     );

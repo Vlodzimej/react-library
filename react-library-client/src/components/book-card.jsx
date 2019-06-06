@@ -57,6 +57,8 @@ export const BookCard = () => {
             verb: 'get',
         }
     );
+    const data = response ? response.data : {};
+    const { title, description, author, year } = data;
 
     useEffect(() => {
         if (bookId > 0) makeRequest();
@@ -75,13 +77,13 @@ export const BookCard = () => {
             {status === BOOK_SUCCESS && (
                 <InnerContainer>
                     <div>Title</div>
-                    <ValueContainer>{response.data.title}</ValueContainer>
+                    <ValueContainer>{title}</ValueContainer>
                     <div>Description</div>
-                    <ValueContainer>{response.data.description}</ValueContainer>
+                    <ValueContainer>{description}</ValueContainer>
                     <div>Author</div>
-                    <ValueContainer>{response.data.author}</ValueContainer>
+                    <ValueContainer>{author}</ValueContainer>
                     <div>Year</div>
-                    <ValueContainer>{response.data.year}</ValueContainer>
+                    <ValueContainer>{year}</ValueContainer>
                 </InnerContainer>
             )}
             {status === BOOK_ERROR && <div>{JSON.stringify(response)}</div>}

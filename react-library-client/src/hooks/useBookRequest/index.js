@@ -18,5 +18,4 @@ const useBookRequest = (endpoint, { verb = 'get', params = {} } = {}) => {
 
     return [state, makeRequest];
 };
-
 export default useBookRequest;

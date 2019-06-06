@@ -16,7 +16,7 @@ const Item = styled.li`
 
 /**
  * Элемент списка
- * @param {array} props 
+ * @param {any} props 
  */
 export const BookItem = props => {
     // eslint-disable-next-line react/prop-types
