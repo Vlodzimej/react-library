@@ -7,7 +7,8 @@ var router = express.Router();
  */
 router.get("/books", function(req, res, next) {
   const data = JSON.parse(fs.readFileSync("data.json", "utf8"));
-  res.json(data);
+  const result = data || [];
+  res.json(result);
 });
 
 /**
@@ -15,7 +16,8 @@ router.get("/books", function(req, res, next) {
  */
 router.get("/book/:id", function(req, res, next) {
   const data = JSON.parse(fs.readFileSync("data.json", "utf8"));
-  res.json(data.find(x => x.id === req.params.id));
+  const result = data.find(x => x.id === req.params.id) || {};
+  res.json(result);
 });
 
 module.exports = router;
