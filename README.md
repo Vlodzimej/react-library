@@ -1,4 +1,4 @@
-"# react-library" 
+# react-library
 
 Запуск react-library-client (порт 3000)
 > npm start
